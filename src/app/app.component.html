@@ -1,0 +1,11 @@
+<button (click)="onClick()">{{ display }}</button>
+<p *ngIf="isDisplay">Hi I am a paragraph</p>
+<ul>
+  <li
+    *ngFor="let item of array; let i = index"
+    [ngStyle]="{ 'background-color': i > 4 ? 'blue' : null }"
+    [ngClass]="{ white: i > 4 }"
+  >
+    {{ i + 1 }}) {{ item }}
+  </li>
+</ul>
